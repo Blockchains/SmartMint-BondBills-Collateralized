@@ -121,11 +121,11 @@ const renderModalContent = (
   switch (item.type) {
     case AVAILABLE_FOR_BORROW:
       title = `Borrow ${item.title}`;
-      subtitle = 'Allow lending Smart Contract to use DAI amount needed to borrow selected ERC-721 token';
+      subtitle = 'Allow lending Smart Contract to use EMIT amount needed to borrow selected ERC-721 token';
       collateralAmount = item.extra.initialWorth + item.extra.earningGoal;
-      confirmTitle = `Allow usage of ${collateralAmount} DAI`;
+      confirmTitle = `Allow usage of ${collateralAmount} EMIT`;
       if (!connectedAccount.balance || connectedAccount.balance < collateralAmount) {
-        warningMessage = 'Not enough DAI balance.';
+        warningMessage = 'Not enough EMIT balance.';
         confirmDisabled = true;
       }
       modalData = [
@@ -136,7 +136,7 @@ const renderModalContent = (
             <NumericInput
               defaultValue={item.extra.initialWorth}
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled
               textRight
             />
@@ -149,7 +149,7 @@ const renderModalContent = (
             <NumericInput
               defaultValue={item.extra.earningGoal}
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled
               textRight
             />
@@ -231,7 +231,7 @@ const renderModalContent = (
               onChange={(initialWorth) => setLendSettings({ ...lendSettings, initialWorth })}
               placeholder="1"
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled={!!pendingTransactionHash}
               textRight
             />
@@ -274,7 +274,7 @@ const renderModalContent = (
               onChange={(earningGoal) => setLendSettings({ ...lendSettings, earningGoal })}
               placeholder="1"
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled={!!pendingTransactionHash}
               textRight
             />
@@ -330,7 +330,7 @@ const renderModalContent = (
       break;
     case APPROVED_FOR_BORROWING:
       title = `Begin borrowing ${item.title}`;
-      subtitle = 'Transfer selected ERC-721 token from lend Smart Contract to your wallet while locking previously approved collateral in DAI';
+      subtitle = 'Transfer selected ERC-721 token from lend Smart Contract to your wallet while locking previously approved collateral in EMIT';
       confirmTitle = 'Borrow';
       infoMessage = 'Friendly reminder: Make sure you stop borrowing before deadline ends or you might lose your collateral!';
       modalData = [
@@ -372,7 +372,7 @@ const renderModalContent = (
       break;
     case SET_FOR_LENDING:
       title = `Cancel lend of ${item.title}`;
-      subtitle = 'Cancel lending and get back your NFT';
+      subtitle = 'Cancel lending and get back your SmartMint BondBill/NFT';
       confirmTitle = 'Cancel Lending';
       onConfirm = async () => {
         const Lend721Contract = await loadLendContract();
@@ -436,7 +436,7 @@ const renderModalContent = (
             <NumericInput
               defaultValue={item.extra.initialWorth}
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled
               textRight
             />
@@ -485,7 +485,7 @@ const renderModalContent = (
             <NumericInput
               defaultValue={item.extra.initialWorth + item.extra.earningGoal}
               inputWidth={70}
-              ticker="DAI"
+              ticker="EMIT"
               disabled
               textRight
             />
