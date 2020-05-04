@@ -15,7 +15,7 @@ const mapFromOpenSea = (data) => data.map(({
 }) => {
   const attributes = traits.map(({ trait_type: title, value }) => ({ title, value }));
   return {
-    title: name || 'Unnamed ERC-721',
+    title: name || 'SmartMint (tm) BondBill',
     backgroundColor,
     image: image || preview,
     tokenAddress,
