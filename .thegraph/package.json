@@ -1,5 +1,5 @@
 {
-  "name": "lend721",
+  "name": "SmartMint BondBill Decentralized ERC20 Self Lending Interface",
   "version": "0.1.0",
   "scripts": {
     "subgraph:prepare": "mustache config/mainnet.json subgraph.template.yaml > subgraph.mainnet.yaml",
