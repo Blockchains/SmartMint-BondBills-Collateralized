@@ -6,7 +6,7 @@
   "dependencies": {
     "@openzeppelin/contracts-ethereum-package": "^2.4.0"
   },
-  "name": "ERC721Lending",
+  "name": "SmartMint BondBill Decentralized ERC20 Self-Lending Interface",
   "version": "0.0.1",
   "compiler": {
     "compilerSettings": {
