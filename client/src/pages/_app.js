@@ -56,7 +56,7 @@ class App extends NextApp {
         <ThemeProvider theme={customTheme}>
           <Head>
             <meta charSet="utf-8" />
-            <title>Lend and borrow ERC-721 NFT on Ethereum | lend721.app</title>
+            <title>Lend and borrow SmartMint BondBill ERC-721 Tokens on ProfitPulse | lend721.app</title>
             <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1" />
             <meta name="theme-color" content="#000000" />
             <link rel="icon" href="favicon.ico" />
