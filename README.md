@@ -1,7 +1,5 @@
 # Ethereum ERC-721 tokens lending platform
 
-![](https://github.com/poocart/lend721/blob/develop/preview.png)
-
 ## 💡 Description
 LEND721 is Ethereum Smart Contract that allows lending ERC-721 Smart Contracts (NFT)
 and gain interest from it. On the other hand it allows to borrow same NFT's that are
