@@ -150,7 +150,7 @@ const renderSettingsTable = (data, setCollectiblePreviewTransaction, isBorrowers
                   <small>
                     You will be able to claim borrower&apos;s collateral
                     after {borrowingDeadlineDate.format('YYYY-MM-DD [at] HH:mm')}&nbsp;
-                    if borrower won&apos;t return your ERC-721.
+                    if borrower won&apos;t return your SmartMint BondBill ERC-721.
                   </small>
                 </Flash>
               )}
@@ -175,7 +175,7 @@ const renderSettingsTable = (data, setCollectiblePreviewTransaction, isBorrowers
     <Table style={{ marginTop: 40 }}>
       <thead>
         <tr>
-          <th>ERC-721 nifty</th>
+          <th>SmartMint BondBills/ERC721s</th>
           {!isBorrowersTable && <th>Max. lending duration</th>}
           {isBorrowersTable && <th>Max. lending until</th>}
           {!isBorrowersTable && <th>Earning goal for duration</th>}
@@ -265,10 +265,10 @@ const App = ({
   const borrowCollectibles = collectibles.data && filterCollectiblesToBorrow(collectibles.data);
 
   const tabs = [
-    { title: isMobile ? 'Owned' : 'Your nifties', content: renderCards(ownedCollectibles, 'Lend your', setCollectiblePreviewTransaction, false, collectibles.pendingTransaction, unsupportedBrowser) },
-    { title: isMobile ? 'Lent' : 'Your lends', content: renderSettingsTable(lentCollectibles, setCollectiblePreviewTransaction), hidden: isEmpty(lentCollectibles) },
-    { title: isMobile ? 'Borrowed' : 'Your borrows', content: renderSettingsTable(borrowedCollectibles, setCollectiblePreviewTransaction, true), hidden: isEmpty(borrowedCollectibles) },
-    { title: isMobile ? 'Borrow' : 'Borrow ERC-721 from pool', content: renderCards(borrowCollectibles, 'Borrow this', setCollectiblePreviewTransaction, true, collectibles.pendingTransaction, unsupportedBrowser) },
+    { title: isMobile ? 'Owned' : 'Your SmartMintBondBills and other ERC721s!', content: renderCards(ownedCollectibles, 'Lend your', setCollectiblePreviewTransaction, false, collectibles.pendingTransaction, unsupportedBrowser) },
+    { title: isMobile ? 'Lent' : 'Your On Loan BondBills/ERC721s', content: renderSettingsTable(lentCollectibles, setCollectiblePreviewTransaction), hidden: isEmpty(lentCollectibles) },
+    { title: isMobile ? 'Borrowed' : 'Your Borrowed BondBills/ERC721s', content: renderSettingsTable(borrowedCollectibles, setCollectiblePreviewTransaction, true), hidden: isEmpty(borrowedCollectibles) },
+    { title: isMobile ? 'Borrow' : 'Borrow A BondBill ERC-721 from pool', content: renderCards(borrowCollectibles, 'Borrow this', setCollectiblePreviewTransaction, true, collectibles.pendingTransaction, unsupportedBrowser) },
     { title: isMobile ? 'FAQ' : 'How this works?', link: 'https://medium.com/@deimantasspucys/lend-and-borrow-ethereum-erc-721-tokens-with-lend721-platform-32f1a22905fd' },
   ];
 
